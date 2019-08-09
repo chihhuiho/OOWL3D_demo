@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<TITLE> YellowKeytronic_Keyboard</TITLE>
+</HEAD>
+<BODY>
+<h1><a href="../../../index.html">Home</a></h1>
+<h1><a href="../index2.html">Keyboard</a></h1>
+<div style="width:960px; margin:auto; position:relative; font-size: 9pt; color: \#FFFFFF;"\>
+<canvas id="cv"  width="960" height="960" ></canvas>
+</div>
+<script type="text/javascript" src="../../../jsc3d.js"></script>
+<script type="text/javascript" src="../../../jsc3d.touch.js"></script>
+<script type="text/javascript" src="../../../jsc3d.webgl.js"></script>
+<script type="text/javascript">
+var canvas = document.getElementById('cv');
+var viewer = new JSC3D.Viewer( canvas, {SceneUrl:'YellowKeytronic_Keyboard.obj',InitRotationX: 30,BackgroundColor1: '\#FFFFFF',BackgroundColor2: '\#FFFFFF',RenderMode: 'texture',Renderer: 'webgl'});
+viewer.init();
+viewer.update();
+viewer.onmousemove = function(x, y, button, depth, mesh) {canvas.style.cursor = mesh ? 'pointer' : '';};
+viewer.onmouseclick = function(x, y, button, depth, mesh) {if(mesh) {window.open('https://www.flickr.com/photos/29424453@N02/6581187381/in/photolist-b2yiHX-m9xD9K-m9yrUX-nrwtXg-a8Quz2-9Baj36-a8Qtt4-gxwVxm-bg2rgc-nh7m4s-9dcV8N-9dcSVq-9dcUA3-9dcU3j-bksi3Y-9UZKuG-m9yrAk-dpPh6N-gHQumR-gHQLRC-dKZmE3-8uTfeC-anSEB8-iFnijd-jDBzKK-8ceD7g-jDEzzu-hHi2gx-a7RNzM');}}
+</script>
+</BODY>
+</HTML>

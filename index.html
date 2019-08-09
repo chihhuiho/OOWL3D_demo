@@ -1,22 +1,24 @@
-<!DOCTYPE HTML>
-<HTML>
-<HEAD>
-<TITLE> AastraDeskPhone_Telephone</TITLE>
-</HEAD>
-<BODY>
-<div style="width:960px; margin:auto; position:relative; font-size: 9pt; color: \#FFFFFF;"\>
-<canvas id="cv"  width="960" height="960" ></canvas>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>OOWL3d</title>
+<link rel="stylesheet" href="static/css/normalize.css">
+<link rel="stylesheet" href="static/themes/classic/galleria.classic.css">
+<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+<div class="container">
+<header>
+<h1><a href="./index.html">OOWL3d</a></h1>
+<p> It takes some time to load the model. This is only for visualization purpose, please open the original file with Meshlab for further details. If you would like to add a new segemented model, please refer to readme.</p>
+</header>
+<div id="main" role="main">
+<div id="albums">
+<ul><li><a href="./models/Airplane/index2.html"><span class="album_title">Airplane</span></a></li><li><a href="./models/Boat/index2.html"><span class="album_title">Boat</span></a></li><li><a href="./models/Bottle/index2.html"><span class="album_title">Bottle</span></a></li><li><a href="./models/Bowl/index2.html"><span class="album_title">Bowl</span></a></li><li><a href="./models/Can/index2.html"><span class="album_title">Can</span></a></li><li><a href="./models/Car/index2.html"><span class="album_title">Car</span></a></li><li><a href="./models/ClockAnalog/index2.html"><span class="album_title">ClockAnalog</span></a></li><li><a href="./models/Hat/index2.html"><span class="album_title">Hat</span></a></li><li><a href="./models/Keyboard/index2.html"><span class="album_title">Keyboard</span></a></li><li><a href="./models/Lamp/index2.html"><span class="album_title">Lamp</span></a></li><li><a href="./models/Laptop/index2.html"><span class="album_title">Laptop</span></a></li><li><a href="./models/Piano/index2.html"><span class="album_title">Piano</span></a></li><li><a href="./models/Telephone/index2.html"><span class="album_title">Telephone</span></a></li><li><a href="./models/Train/index2.html"><span class="album_title">Train</span></a></li></ul>
 </div>
-<script type="text/javascript" src="./jsc3d.js"></script>
-<script type="text/javascript" src="./jsc3d.touch.js"></script>
-<script type="text/javascript" src="./jsc3d.webgl.js"></script>
-<script type="text/javascript">
-var canvas = document.getElementById('cv');
-var viewer = new JSC3D.Viewer( canvas, {SceneUrl:'./models/AFour_Airplane.files.obj',InitRotationX: 30,BackgroundColor1: '\#FFFFFF',BackgroundColor2: '\#FFFFFF',RenderMode: 'texture',Renderer: 'webgl'});
-viewer.init();
-viewer.update();
-viewer.onmousemove = function(x, y, button, depth, mesh) {canvas.style.cursor = mesh ? 'pointer' : '';};
-viewer.onmouseclick = function(x, y, button, depth, mesh) {if(mesh) {window.open('https://www.flickr.com/photos/29424453@N02/6581187381/in/photolist-b2yiHX-m9xD9K-m9yrUX-nrwtXg-a8Quz2-9Baj36-a8Qtt4-gxwVxm-bg2rgc-nh7m4s-9dcV8N-9dcSVq-9dcUA3-9dcU3j-bksi3Y-9UZKuG-m9yrAk-dpPh6N-gHQumR-gHQLRC-dKZmE3-8uTfeC-anSEB8-iFnijd-jDBzKK-8ceD7g-jDEzzu-hHi2gx-a7RNzM');}}
-</script>
-</BODY>
-</HTML>
+ </div>
+ </div>
+ </body>
+ </html>
