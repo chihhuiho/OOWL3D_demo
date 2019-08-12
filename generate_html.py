@@ -53,7 +53,7 @@ def create_class_html(cls, objs):
 )
         for obj in objs:
             f.write("<li><a href=\"./"+ obj + "/index2.html\">\
-<span class=\"album_title\">" + obj +"</span></a></li>")
+<span class=\"album_title\">" + obj +"</span></a></li><br>")
         
         f.write("</ul>\n</div>\n </div>\n </div>\n </body>\n </html>")
         
