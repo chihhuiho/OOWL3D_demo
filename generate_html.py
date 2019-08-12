@@ -2,6 +2,10 @@ import os
 from glob import glob
 
 def create_root_html(classes):
+    model_num = 0
+    for c in classes:
+        model_num += len(os.listdir("./models/" + c))
+        
     with open('./index.html', 'w') as f:
         f.write("<!doctype html>\n\
 <html lang=\"en\">\n\
@@ -17,7 +21,7 @@ def create_root_html(classes):
 <div class=\"container\">\n\
 <header>\n\
 <h1><a href=\"./index.html\">OOWL3d</a></h1>\n\
-<p> It takes some time to load the model. This is only for visualization purpose, please open the original file with Meshlab for further details. If you would like to add a new segemented model, please refer to readme.</p>\n\
+<p> This is a visual demo website for OOWL3D dataset provided by UC San Diego Statistical Visual Computing Lab. This dataset is still expanding and currently contains "+ str(model_num)+ " models. It takes some time to load the model. This is only for visualization purpose, please open the original file with Meshlab for further details. If you would like to contribute a new segemented model, please refer to readme.</p>\n\
 </header>\n\
 <div id=\"main\" role=\"main\">\n\
 <div id=\"albums\">\n\
