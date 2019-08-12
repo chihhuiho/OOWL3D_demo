@@ -34,6 +34,7 @@ def create_root_html(classes):
         f.write("</ul>\n</div>\n </div>\n </div>\n </body>\n </html>")
         
 def create_class_html(cls, objs):
+    model_num = len(os.listdir("./models/" + cls))
     with open('./models/' + cls + '/index2.html', 'w') as f:
         f.write("<!doctype html>\n\
 <html lang=\"en\">\n\
@@ -49,7 +50,7 @@ def create_class_html(cls, objs):
 <div class=\"container\">\n\
 <header>\n\
 <h1><a href=\"../../index.html\">Home</a></h1>\n\
-<h1><a href=\"./index2.html\">" + cls + "</a></h1>\n\
+<h1><a href=\"./index2.html\">" + str(model_num) + ' ' + cls + "</a></h1>\n\
 </header>\n\
 <div id=\"main\" role=\"main\">\n\
 <div id=\"albums\">\n\
