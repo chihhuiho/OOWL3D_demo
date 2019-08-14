@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../../../jsc3d.webgl.js"></script>
 <script type="text/javascript">
 var canvas = document.getElementById('cv');
-var viewer = new JSC3D.Viewer( canvas, {SceneUrl:'ToyPirateShip_Boat.obj',InitRotationX: 30,BackgroundColor1: '\#FFFFFF',BackgroundColor2: '\#FFFFFF',RenderMode: 'texture',Renderer: 'webgl'});
+var viewer = new JSC3D.Viewer( canvas, {SceneUrl:'ToyPirateShipDM_Boat.obj',InitRotationX: 30,BackgroundColor1: '\#FFFFFF',BackgroundColor2: '\#FFFFFF',RenderMode: 'texture',Renderer: 'webgl'});
 viewer.init();
 viewer.update();
 viewer.onmousemove = function(x, y, button, depth, mesh) {canvas.style.cursor = mesh ? 'pointer' : '';};

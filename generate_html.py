@@ -63,6 +63,13 @@ def create_class_html(cls, objs):
         f.write("</ul>\n</div>\n </div>\n </div>\n </body>\n </html>")
         
 def create_model_html(cls, obj):
+   
+    obj_file = [n for n in os.listdir('./models/' + cls + '/' + obj) if n[-3:] == 'obj']
+    if len(obj_file) == 0:
+        obj_file = ""
+    else:
+        obj_file = obj_file[0]	
+
     with open('./models/' + cls + '/' + obj +'/index2.html', 'w') as f:
         f.write("\
 <!DOCTYPE HTML>\n\
@@ -82,7 +89,7 @@ def create_model_html(cls, obj):
 <script type=\"text/javascript\" src=\"../../../jsc3d.webgl.js\"></script>\n\
 <script type=\"text/javascript\">\n\
 var canvas = document.getElementById(\'cv\');\n\
-var viewer = new JSC3D.Viewer( canvas, {SceneUrl:\'" + obj + '.obj' +\
+var viewer = new JSC3D.Viewer( canvas, {SceneUrl:\'" + obj_file +\
 "\',InitRotationX: 30,\
 BackgroundColor1: \'\#FFFFFF\',\
 BackgroundColor2: \'\#FFFFFF\',\
@@ -113,3 +120,4 @@ if __name__ == '__main__':
         create_class_html(c, objs)
         for obj in objs:
             create_model_html(c, obj)
+
