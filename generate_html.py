@@ -120,4 +120,3 @@ if __name__ == '__main__':
         create_class_html(c, objs)
         for obj in objs:
             create_model_html(c, obj)
-
