@@ -6,12 +6,12 @@ d 1.0
 Ns 0.0
 illum 0
 
-newmtl 1
+newmtl BlueWoodenToy_Airplane
 Ka 1.0 1.0 1.0
 Kd 1.0 1.0 1.0
 Ks 0.0 0.0 0.0
 d 1.0
 Ns 0.0
 illum 0
-map_Kd 1.jpg
+map_Kd BlueWoodenToy_Airplane.jpg
 
