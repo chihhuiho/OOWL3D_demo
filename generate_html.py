@@ -64,12 +64,19 @@ def create_class_html(cls, objs):
         
 def create_model_html(cls, obj):
    
+    # read .obj
     obj_file = [n for n in os.listdir('./models/' + cls + '/' + obj) if n[-3:] == 'obj']
     if len(obj_file) == 0:
         obj_file = ""
     else:
-        obj_file = obj_file[0]	
-
+        obj_file = obj_file[0]
+    
+	# read meta data
+    model_meta = "self-scanning"
+    if os.path.exists('./models/' + cls + '/' + obj +'/meta.txt'):
+	    with open('./models/' + cls + '/' + obj +'/meta.txt', 'r') as f:
+                lines = f.readlines()
+            model_meta = lines[0]
     with open('./models/' + cls + '/' + obj +'/index2.html', 'w') as f:
         f.write("\
 <!DOCTYPE HTML>\n\
@@ -79,8 +86,8 @@ def create_model_html(cls, obj):
 "</TITLE>\n\
 </HEAD>\n\
 <BODY>\n\
-<h1><a href=\"../../../index.html\">Home</a></h1>\n\
-<h1><a href=\"../index2.html\">" + cls + "</a></h1>\n\
+<h1><a href=\"../../../index.html\">Home</a> <a href=\"../index2.html\">" + cls + "</a></h1>\n\
+<p>This model is collected by " + model_meta + "</p>\
 <div style=\"width:960px; margin:auto; position:relative; font-size: 9pt; color: \#FFFFFF;\"\>\n\
 <canvas id=\"cv\"  width=\"960\" height=\"960\" ></canvas>\n\
 </div>\n\
