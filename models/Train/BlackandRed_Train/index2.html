@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
-<TITLE> BlackandRed_Train</TITLE>
+<TITLE> BlackAndRed_Train</TITLE>
 </HEAD>
 <BODY>
 <h1><a href="../../../index.html">Home</a> <a href="../index2.html">Train</a></h1>
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../../../jsc3d.webgl.js"></script>
 <script type="text/javascript">
 var canvas = document.getElementById('cv');
-var viewer = new JSC3D.Viewer( canvas, {SceneUrl:'BlackandRed_Train.obj',InitRotationX: 30,BackgroundColor1: '\#FFFFFF',BackgroundColor2: '\#FFFFFF',RenderMode: 'texture',Renderer: 'webgl'});
+var viewer = new JSC3D.Viewer( canvas, {SceneUrl:'BlackandRedDM_Train.obj',InitRotationX: 30,BackgroundColor1: '\#FFFFFF',BackgroundColor2: '\#FFFFFF',RenderMode: 'texture',Renderer: 'webgl'});
 viewer.init();
 viewer.update();
 viewer.onmousemove = function(x, y, button, depth, mesh) {canvas.style.cursor = mesh ? 'pointer' : '';};
