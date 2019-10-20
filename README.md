@@ -36,3 +36,6 @@ python generate_html.py
 
 ## Acknowledgement
 The website is created based on https://github.com/xxv/jsc3d/tree/master/jsc3d. Thanks for all the contributers.
+
+## Contributors
+Po Hsiang Huang, Sean Kamano, Dacheng Li, Jiayi Wang, Yixuan Huang, Brandon Leung, Chih-Hui Ho
